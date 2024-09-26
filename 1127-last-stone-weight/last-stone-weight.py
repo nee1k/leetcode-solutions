@@ -1,9 +1,12 @@
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
-        while len(stones) > 1:
-            stones = sorted(stones, reverse=True)
-            x = stones.pop(0)
-            y = stones.pop(0)
+        while len(stones) > 1:            
+            x = max(stones)
+            stones.remove(x)
+
+            y = max(stones)
+            stones.remove(y)
+
             diff = abs(x-y)
 
             if diff != 0:
