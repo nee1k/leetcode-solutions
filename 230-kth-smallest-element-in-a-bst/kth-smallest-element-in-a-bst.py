@@ -12,7 +12,7 @@ class Solution:
                 return
             
             if len(res) == k:
-                return res[k-1]
+                return res
 
             dfs(root.left, res, k)
             res.append(root.val)
