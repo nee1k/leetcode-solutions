@@ -7,8 +7,6 @@ class Solution:
                 num1 = stack.pop()
                 num2 = stack.pop()
 
-                print(num2, token, num1)
-
                 if token == "+":
                     stack.append(num1 + num2)
                 
