@@ -3,10 +3,7 @@ class Solution:
         res = []
         subset = []
 
-        i = 0
-        total = 0
         def dfs(i, total):
-            
             if i >= len(candidates):
                 if total == target:
                     res.append(subset.copy())
@@ -14,12 +11,14 @@ class Solution:
             
             if total > target:
                 return
-
+            
             subset.append(candidates[i])
             dfs(i, total + candidates[i])
 
             subset.pop()
             dfs(i+1, total)
         
-        dfs(i, total)
+        dfs(0, 0)
         return res
+                
+        
